@@ -1,0 +1,12 @@
+name: A workflow for my Hello Github Actions file
+on: push
+
+jobs:
+  build:
+    name: Hello Github Action
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@master
+    - uses: ./action-a
+      env:
+        MY_NAME: "Shivam Rathore"
